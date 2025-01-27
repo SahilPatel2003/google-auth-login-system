@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard Page</title>
+  
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            
+            <div class="flex items-center">
+                <img style="width: 70px;" src="images/logo.png" alt="">
+                <h1 class="font-bold text-3xl ml-2 text-white">Salesmate</h1>
+            </div>
+          
+            <button class="text-white hover:text-gray-300 font-semibold border border-white rounded px-4 py-2" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+    
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-semibold text-center mb-8">Welcome to Our Website</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+           
+            <div class="bg-white p-6 rounded shadow-md">
+                <h2 class="text-xl font-semibold mb-4">About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et mollis magna. Integer pretium sapien nec ante gravida ultricies.</p>
+            </div>
+        
+            <div class="bg-white p-6 rounded shadow-md">
+                <h2 class="text-xl font-semibold mb-4">Contact Us</h2>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: 123 Main Street, City, Country</p>
+            </div>
+        </div>
+    </div>
+   <script src="dashboard.js"></script>
+</body>
+
+</html>

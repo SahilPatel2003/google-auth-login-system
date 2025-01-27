@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<p>please wait</p>
+
+<script>
+    function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    async function sendCodeToServer(code) {
+        try {
+            const response = await fetch("http://localhost:3003/authenticate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                credentials: "include",
+                body: JSON.stringify({ code }),
+            });
+
+            console.log("response:", response);
+            if (response.ok) {
+                // Redirect to dashboard
+                window.location.href = "dashboard.html";
+            } else {
+                // Redirect to login
+                window.location.href = "login.html";
+            }
+
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }
+
+    window.onload = async function () {
+        const code = getQueryParameter("code");
+        await sendCodeToServer(code);
+    };
+
+
+</script>
+</body>
+
+</html>

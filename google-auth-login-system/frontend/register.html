@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        
+        .form-input:focus {
+            border-color: black;
+        }
+
+        .form-input:hover {
+            border-color: black;
+        }
+
+        .form-input.invalid {
+            border-color: #EF4444;
+        }   
+
+    </style>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+    <div class="max-w-md w-full px-6">
+      
+        <div class="text-center mb-8 flex justify-center">
+            <img style="width: 70px;" src="images/logo.png" alt="">
+            <h1 class="font-bold text-3xl ml-2">Salesmate</h1>
+        </div>
+
+        <div style="border-width: 1.8px ;" class="border-solid p-4 p-8 rounded-md">
+         
+            <div class="mb-4">
+                <input type="text" id="username" style="border-width: 1.8px;" class="form-input p-1 pl-2 rounded-sm w-full" placeholder="Username">
+                <p id="username-error" class="text-red-500 hidden">Username is required</p>
+            </div>
+           
+            <div class="mb-4">
+                <input type="email" id="email" style="border-width: 1.8px;" class="form-input p-1 pl-2 rounded-sm w-full" placeholder="Email Address">
+                <p id="email-error" class="text-red-500 hidden">Email is required</p>
+            </div>
+            
+            <div class="mb-4">
+                <input type="password" id="password" style="border-width: 1.8px;" class="form-input p-1 pl-2 rounded-sm w-full" placeholder="Password">
+                <p id="password-error" class="text-red-500 hidden">Password is required</p>
+            </div>
+         
+            <div class="mb-4">
+                <input type="password" id="confirm-password" style="border-width: 1.8px;" class="form-input p-1 pl-2 rounded-sm w-full" placeholder="Confirm Password">
+                <p id="confirm-password-error" class="text-red-500 hidden">Please confirm your password</p>
+            </div>
+          
+            <div class="mb-4">
+                <button id="signup-button" class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600">Sign Up</button>
+            </div>
+          
+            <div class="text-center mb-4 relative">
+                <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/3 border-t border-gray-300"></div>
+                <span class="inline-block px-2 bg-white text-gray-500">Or Sign Up With</span>
+                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/3 border-t border-gray-300"></div>
+            </div>  
+          
+            <div class="flex justify-center mb-4 space-x-4">
+                <button id="google-signup-button" class="bg-red-500 text-white font-semibold px-4 py-2 rounded hover:bg-red-600">Google</button>
+            </div>
+           
+            <div class="text-center">
+                <p class="text-gray-600">Already have an account? <a href="login.html" class="text-blue-500">Sign In</a></p>
+            </div>
+
+        </div>
+    </div>
+        
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="register.js"></script>
+</body>
+
+</html>
